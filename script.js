@@ -47,7 +47,7 @@ activateBtn.addEventListener('click', function() {
         statusText.textContent = 'AKTIF';
         statusText.style.color = '#00ff00';
         statusIndicator.classList.add('status-active');
-        activateBtn.innerHTML = '<i class="fas fa-power-off"></i> MATIKAN FANTASI AIMBOT';
+        activateBtn.innerHTML = '<i class="fas fa-power-off"></i> MATIKAN  AIMBOT';
         activateBtn.style.background = 'linear-gradient(to right, #00cc00, #009900)';
         
         // Efek visual saat diaktifkan
@@ -57,16 +57,16 @@ activateBtn.addEventListener('click', function() {
         }, 10);
         
         // Tampilkan notifikasi
-        showNotification('Fantasi Aimbot Diaktifkan!', 'success');
+        showNotification('Aimbot Diaktifkan!', 'success');
     } else {
         statusText.textContent = 'NON-AKTIF';
         statusText.style.color = '#ff3333';
         statusIndicator.classList.remove('status-active');
-        activateBtn.innerHTML = '<i class="fas fa-rocket"></i> AKTIFKAN FANTASI AIMBOT';
+        activateBtn.innerHTML = '<i class="fas fa-rocket"></i> AKTIFKAN AIMBOT';
         activateBtn.style.background = 'linear-gradient(to right, #ff3333, #cc0000)';
         
         // Tampilkan notifikasi
-        showNotification('Fantasi Aimbot Dimatikan!', 'warning');
+        showNotification('F Aimbot Dimatikan!', 'warning');
     }
 });
 
