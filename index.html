@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire aimbot Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-bg"></div>
+    <div class="crosshair-bg"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-crosshairs"></i> FREE FIRE AIMBOT </h1>
+            <p>Panel untuk meningkatkan akurasi headshot</p>
+        </div>
+        
+        <div class="main-content">
+            <h2 class="section-title" style="margin-top: 40px;">TUTORIAL PENGGUNAAN</h2>
+            <p style="margin-bottom: 20px; line-height: 1.6;">
+                Panel ini adalah <strong>aimbot</strong>  
+            </p>
+            
+            <div style="display: flex; gap: 15px; margin-top: 30px;">
+                <button class="btn btn-secondary"><i class="fas fa-gamepad"></i> Mode Latihan</button>
+                <button class="btn btn-secondary"><i class="fas fa-sliders-h"></i> Preset Lainnya</button>
+                <button class="btn btn-secondary"><i class="fas fa-question-circle"></i> Bantuan</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Panel Mengambang -->
+    <div class="floating-panel">
+        <div class="panel-header">
+            <div class="panel-title">
+                <i class="fas fa-crosshairs"></i> AIMBOT CONTROL
+            </div>
+            <button class="panel-close" id="closePanel">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="panel-body">
+            <div class="aimbot-control">
+                <div class="control-title">
+                    <i class="fas fa-bullseye"></i> AKURASI AIMBOT
+                </div>
+                <input type="range" min="1" max="100" value="85" class="control-slider" id="accuracySlider">
+                <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+                    <span>Normal</span>
+                    <span style="color: #ff3333; font-weight: bold;">85% (Tinggi)</span>
+                    <span>Extreme</span>
+                </div>
+            </div>
+            
+            <div class="aimbot-control">
+                <div class="control-title">
+                    <i class="fas fa-arrows-alt-h"></i> REAKSI AIMBOT
+                </div>
+                <input type="range" min="1" max="100" value="70" class="control-slider" id="reactionSlider">
+                <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+                    <span>Slow</span>
+                    <span style="color: #ff9933; font-weight: bold;">70% (Fast)</span>
+                    <span>Instant</span>
+                </div>
+            </div>
+            
+            <div class="aimbot-control">
+                <div class="control-title">
+                    <i class="fas fa-skull-crossbones"></i> HEADSHOT PRIORITY
+                </div>
+                <label class="toggle-label">
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="headshotToggle" checked>
+                        <span class="toggle-slider"></span>
+                    </div>
+                    <span>Prioritaskan headshot otomatis</span>
+                </label>
+                
+                <label class="toggle-label">
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="targetToggle" checked>
+                        <span class="toggle-slider"></span>
+                    </div>
+                    <span>Auto target switching</span>
+                </label>
+                
+                <label class="toggle-label">
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="visibilityToggle">
+                        <span class="toggle-slider"></span>
+                    </div>
+                    <span>Target hanya yang terlihat</span>
+                </label>
+            </div>
+            
+            <div class="aimbot-control">
+                <div class="control-title">
+                    <i class="fas fa-keyboard"></i> HOTKEY SETTINGS
+                </div>
+                <div class="hotkey-display">
+                    AIM KEY: <strong style="color: #00ff00;">[ALT]</strong> + <strong style="color: #00ff00;">[CLICK KANAN]</strong>
+                </div>
+                <div class="hotkey-display" style="margin-top: 10px;">
+                    TOGGLE: <strong style="color: #00ccff;">[F4]</strong>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary" id="activateBtn">
+                <i class="fas fa-rocket"></i> AKTIFKAN AIMBOT
+            </button>
+            
+            <div class="aimbot-status">
+                <div>
+                    <strong>STATUS:</strong> <span id="statusText" style="color: #ff3333; font-weight: bold;">NON-AKTIF</span>
+                </div>
+                <div class="status-indicator" id="statusIndicator"></div>
+            </div>
+            
+            <div style="margin-top: 20px; font-size: 0.8rem; color: #8888cc; text-align: center;">
+                <i class="fas fa-exclamation-triangle"></i> 
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-note">
+        <!-- Footer content removed in original code -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
